@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Browser Pairs Game - Using CSS3 Animation</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Days+One">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<article id="game">
+	<header id="gameStats">
+		<a id="qrcode" href="#codebox">QRCODE</a>
+		<p id="reset">Reset &raquo;</p>
+		<p id="gameScore">
+			Click: <span id="click">0</span>
+			Time: <span id="timer">0</span>
+		</p>
+		<a id="credit" href="#creditbox">Credit</a>
+		<p class="baritem" id="mute">Music</p>
+		<p class="baritem" id="interlude">Splash</p>
+		<p class="baritem" id="fullscreen">FullScreen</p>
+	</header>
+	<section id="gameIntro">
+		<div id="gamePlay">0%</div>
+	</section>
+	<section id="gameComplete">
+			<p id="score"></p>
+			<p><a id="gameAgain" class="button" href="#">Play again</a></p>
+	</section>
+	<section id="cards">
+		<div class="card">
+			<div class="face front"></div>
+			<div class="face back"></div>
+		</div> <!-- .card -->
+	</section> <!-- #cards -->
+</article> <!-- #game -->
+<div id="splash">
+	<p>
+		<span id="ie"><img src="images/icon_ie.png" alt="Internet Explorer" /></span>
+		<span id="fx"><img src="images/icon_fx.png" alt="Mozilla Firefox" /></span>
+		<span id="cr"><img src="images/icon_cr.png" alt="Google Chrome" /></span>
+		<span id="op"><img src="images/icon_op.png" alt="Opera" /></span>
+	</p>
+	<p>
+		<span id="sf"><img src="images/icon_sf.png" alt="Apple Safari" /></span>
+		<span id="ns"><img src="images/icon_ns.png" alt="Netscape Navigator" /></span>
+		<span id="ms"><img src="images/icon_ms.png" alt="NCSA Mosaic" /></span>
+		<span id="tb"><img src="images/icon_tb.png" alt="Mozilla Thunderbird" /></span>
+		<span id="fm"><img src="images/icon_fm.png" alt="Mascot Foxmosa" /></span>
+	</p>
+</div>
+<section id="creditbox" class="lightbox">
+	<div>
+		<h2>HTML5 Browser Pairs Game</h2>
+		<p><a href="http://moztw.org">Mozilla Taiwan Community</a><br />×<br /><a href="http://blog.yam.com/ECBp/article/44076465">Explorer Cyber Browserer Comic</a></p>
+		<p>Illustrated by ECBp,<br />licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/tw/">CC:BY-NC-SA-3.0-TW</a></p>
+		<p>Music: Mozilla-Blues, composed by <a href="http://magicdesign.blogspot.com/">MGdesigner</a>,<br />licensed under <a href="http://creativecommons.org/licenses/by/3.0/tw/deed.en">CC:BY-3.0-TW</a></p>
+		<p>Programed by <a href="http://kidwm.net/">WM</a>, Derived from <a href="http://www.my-html-codes.com/game-using-css3-animation">Dino Pair Game</a><br />by <a href="http://www.my-html-codes.com/">Matt Walker</a>, Thank him for the original game.</p>
+		<p><a href="#">&raquo; close &laquo;</a></p>
+	</div>
+</section>
+<section id="codebox" class="lightbox">
+	<div>
+		<p><img src="http://chart.googleapis.com/chart?chs=360x360&cht=qr&chl=http%3A%2F%2Fmoztw.org%2F" alt="QR Code" /></p>
+		<p><a href="#">&raquo; close &laquo;</a></p>
+	</div>
+</section>
+<audio id="melody" src="song.ogg"></audio>
+<audio class="sound" src="intro.ogg"></audio>
+<audio class="sound" src="select.ogg"></audio>
+<audio class="sound" src="match.ogg"></audio>
+<audio class="sound" src="applause.ogg"></audio>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="pxloader.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
