@@ -12,11 +12,11 @@ a {
 body {
 	text-align: center;
 	background-color: #F26522;
-	background-image: -moz-linear-gradient(0, rgba(200,0,0,.5) 50%, transparent 50%), -moz-linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
-	background-image: -webkit-linear-gradient(0, rgba(200,0,0,.5) 50%, transparent 50%), -webkit-linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
-	background-image: -o-linear-gradient(0, rgba(200,0,0,.5) 50%, transparent 50%), -o-linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
-	background-image: linear-gradient(0, rgba(200,0,0,.5) 50%, transparent 50%), linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
-	background-size: 50px 50px;
+	background: url(images/left.png) no-repeat bottom left fixed, url(images/right.png) no-repeat bottom right fixed, -moz-linear-gradient(0, rgba(200,0,0,.5) 50%, transparent 50%), -moz-linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%), #F26522;
+	background: url(images/left.png) no-repeat bottom left fixed, url(images/right.png) no-repeat bottom right fixed, -o-linear-gradient(0, rgba(200,0,0,.5) 50%, transparent 50%), -o-linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%), #F26522;
+	background: url(images/left.png) no-repeat bottom left fixed, url(images/right.png) no-repeat bottom right fixed, -webkit-linear-gradient(0, rgba(200,0,0,.5) 50%, transparent 50%), -webkit-linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%), #F26522;
+	background: url(images/left.png) no-repeat bottom left fixed, url(images/right.png) no-repeat bottom right fixed, linear-gradient(0, rgba(200,0,0,.5) 50%, transparent 50%), linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%), #F26522;
+	background-size: auto auto, auto auto, 50px 50px, 50px 50px, auto auto;
 	color: #DA4930;
 	font-family: "Days One", sans-serif;
 }
@@ -494,7 +494,7 @@ body {
 	transition: opacity .8s ease;
 	position: absolute;
 	width: 760px;
-	height: 450px;
+	height: 520px;
 	padding: 1em;
 	margin: auto;
 	top: 0;
@@ -527,7 +527,7 @@ body {
 
 .lightbox p {
 	font-size: 1.5em;
-	margin: .8em .5em 0;
+	margin: .5em;
 }
 
 .ie {background: url(./images/ie.png) no-repeat -5px -15px;}

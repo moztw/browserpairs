@@ -42,6 +42,9 @@ $(function(){
 	loader.addImage('images/start.png');
 	loader.addImage('images/end.png');
 	loader.addImage('images/card.png');
+	loader.addImage('images/left.png');
+	loader.addImage('images/right.png');
+	loader.addImage('images/logo.jpg');
 	loader.addImage('images/ie.png');
 	loader.addImage('images/icon_ie.png');
 	loader.addImage('images/fx.png');
@@ -62,7 +65,7 @@ $(function(){
 	loader.addImage('images/icon_fm.png');
 	loader.addProgressListener(function(e) {
 		if (e.completedCount * 5 < 100) {
-			uiPlay.text(e.completedCount * 5 + '%');
+			uiPlay.text(e.completedCount * 4 + '%');
 		}
 	});
 	loader.addCompletionListener(function() {
