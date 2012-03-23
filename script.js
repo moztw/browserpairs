@@ -1,3 +1,20 @@
+// Prompt user to reload if there is a new version downloaded
+if (window.applicationCache) {
+	window.applicationCache.addEventListener(
+		'updateready',
+		function () {
+			// XXX: need better UI here
+			if (!window.confirm(
+					'A new version of the game is available.' +
+					' Reload to run the new version?')) {
+				return;
+			}
+			// hard: swap file on-fly might crash the game
+			// window.applicationCache.swapCache();
+			window.location.reload(); // easier
+		}
+	);
+};
 
 //create all the variables
 var score;
