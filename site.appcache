@@ -1,12 +1,10 @@
 CACHE MANIFEST
 # Renew this hash every time to invalidate current cache
 # hash 2e0d29f27a02ee07451331cf36555a8f
-
 # Files to ask browsers to cache even when user hits reload
 CACHE:
 
 ./applause.ogg
-./images
 ./images/card.png
 ./images/cr.png
 ./images/end.png
