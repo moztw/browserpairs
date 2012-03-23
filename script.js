@@ -116,15 +116,16 @@ function init() {
 			$('.reset').removeClass('reset');
 		});
 	});
-	if (typeof document.cancelFullScreen != 'undefined' || 
-		typeof document.mozCancelFullScreen != 'undefined' || 
+	if (typeof document.cancelFullScreen != 'undefined' ||
+		typeof document.mozCancelFullScreen != 'undefined' ||
 		typeof document.webkitCancelFullScreen != 'undefined') {
 		uiFullscreen.click(toggleFullscreen);
 		uiFullscreen.addClass('support');
 	}
-	
+
 	//Handle the audio
-	if(mediaSupport('audio/ogg; codecs="theora, vorbis"', 'audio')) {
+	if(mediaSupport('audio/ogg; codecs=vorbis', 'audio') ||
+		mediaSupport('audio/mpeg', 'audio')) {
 		var melody = $('#melody')[0];
 		melody.volume = 0.15;
 		melody.muted = false;
@@ -245,7 +246,7 @@ function isMatchPattern() {
 	}
 }
 
-//check to see if all cardmatched variable is less than 8 if so remove card only otherwise remove card and end game 
+//check to see if all cardmatched variable is less than 8 if so remove card only otherwise remove card and end game
 function removeTookCards() {
 	playSound('match');
 	if (cardsmatched < 8){
@@ -353,7 +354,7 @@ function mediaSupport(mimetype, container) {
  * Shuffles an array or the children of a element container.
  * This uses the Fisher-Yates shuffle algorithm <http://jsfromhell.com/array/shuffle [v1.0]>
  */
- 
+
 (function($){
 
 	$.fn.shuffle = function() {
