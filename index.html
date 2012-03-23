@@ -79,11 +79,26 @@
 		<p><a href="#">&raquo; close &laquo;</a></p>
 	</div>
 </section>
-<audio id="melody" src="song.ogg"></audio>
-<audio class="sound" src="intro.ogg"></audio>
-<audio class="sound" src="select.ogg"></audio>
-<audio class="sound" src="match.ogg"></audio>
-<audio class="sound" src="applause.ogg"></audio>
+<audio id="melody">
+   <source src="song.ogg" type="audio/ogg; codecs=vorbis" />
+   <source src="song.mp3" type="audio/mpeg" />
+</audio>
+<audio class="sound">
+   <source src="intro.ogg" type="audio/ogg; codecs=vorbis" />
+   <source src="intro.mp3" type="audio/mpeg" />
+</audio>
+<audio class="sound">
+   <source src="select.ogg" type="audio/ogg; codecs=vorbis" />
+   <source src="select.mp3" type="audio/mpeg" />
+</audio>
+<audio class="sound">
+   <source src="match.ogg" type="audio/ogg; codecs=vorbis" />
+   <source src="match.mp3" type="audio/mpeg" />
+</audio>
+<audio class="sound">
+   <source src="applause.ogg" type="audio/ogg; codecs=vorbis" />
+   <source src="applause.mp3" type="audio/mpeg" />
+</audio>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="pxloader.js"></script>
 <script src="script.js"></script>
