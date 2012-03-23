@@ -1,0 +1,54 @@
+CACHE MANIFEST
+# Renew this hash every time to invalidate current cache
+# hash 2e0d29f27a02ee07451331cf36555a8f
+
+# Files to ask browsers to cache even when user hits reload
+CACHE:
+
+./applause.ogg
+./images
+./images/card.png
+./images/cr.png
+./images/end.png
+./images/fm.png
+./images/fx.png
+./images/icon_cr.png
+./images/icon_fm.png
+./images/icon_fx.png
+./images/icon_ie.png
+./images/icon_ms.png
+./images/icon_ns.png
+./images/icon_op.png
+./images/icon_sf.png
+./images/icon_tb.png
+./images/ie.png
+./images/ipad-splash-landscape.png
+./images/ipad-splash-portrait.png
+./images/left.png
+./images/logo.jpg
+./images/ms.png
+./images/ns.png
+./images/op.png
+./images/right.png
+./images/sf.png
+./images/start.png
+./images/tb.png
+./intro.ogg
+./match.ogg
+./pxloader.js
+./script.js
+./select.ogg
+./site.appcache
+./song.ogg
+./style.css
+
+# Yes, it also works for remote files, but we will be unable to track their changes
+//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+
+# "*" Below guarantees non-cached files can be accessed when network is available
+NETWORK:
+*
+
+# HTTP header also matters. Self-taught material available at
+# http://diveintohtml5.info/offline.html
+
