@@ -292,24 +292,24 @@ body {
 
 #score:before {
 	content: ' ';
-	position: absolute;  
-	width: 0;  
-	height: 0;  
-	left: 140px;  
-	top: -50px;  
-	border: 25px solid;  
-	border-color: transparent #DA4930 #DA4930 transparent;  
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 140px;
+	top: -50px;
+	border: 25px solid;
+	border-color: transparent #DA4930 #DA4930 transparent;
 }
 
 #score:after {
 	content: ' ';
-	position: absolute;  
-	width: 0;  
-	height: 0;  
-	left: 142px;  
-	top: -30px;  
-	border: 20px solid;  
-	border-color: transparent #fff #fff transparent;  
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 142px;
+	top: -30px;
+	border: 20px solid;
+	border-color: transparent #fff #fff transparent;
 }
 
 .face {
