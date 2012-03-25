@@ -1,12 +1,10 @@
 CACHE MANIFEST
 # Renew this hash every time to invalidate current cache
-# hash 2c573dad24061e9f1a0b9c24cad6e29b
+# hash 71510babac521e9a1f06da12ca3e8017
 
 # Files to ask browsers to cache even when user hits reload
 CACHE:
 
-./applause.ogg
-./applause.mp3
 ./images/card.png
 ./images/cr.png
 ./images/end.png
@@ -33,17 +31,19 @@ CACHE:
 ./images/sf.png
 ./images/start.png
 ./images/tb.png
-./intro.ogg
-./intro.mp3
-./match.ogg
-./match.mp3
+./sound/applause.mp3
+./sound/applause.ogg
+./sound/intro.mp3
+./sound/intro.ogg
+./sound/match.mp3
+./sound/match.ogg
+./sound/select.mp3
+./sound/select.ogg
+./sound/song.mp3
+./sound/song.ogg
 ./pxloader.js
 ./script.js
-./select.ogg
-./select.mp3
 ./site.appcache
-./song.ogg
-./song.mp3
 ./style.css
 
 # Yes, it also works for remote files, but we will be unable to track their changes
