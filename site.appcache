@@ -1,6 +1,6 @@
 CACHE MANIFEST
 # Renew this hash every time to invalidate current cache
-# hash dba872fd6e6a0539b1365f33a8b81f86
+# hash df0be193432164f0e32daa218248fd0a -
 
 # Files to ask browsers to cache even when user hits reload
 CACHE:

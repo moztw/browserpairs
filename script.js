@@ -266,9 +266,7 @@ function reStartGame(){
 
 function playSound(filename) {
 	var index = ['intro','select','match','applause'].indexOf(filename);
-	var sound = new Audio();
-	sound.src = $('audio.sound').get(index).src;
-	sound.play();
+	$('audio.sound').get(index).play();
 }
 
 function toggleFullscreen() {
