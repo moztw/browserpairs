@@ -1,20 +1,6 @@
-// Prompt user to reload if there is a new version downloaded
-if (window.applicationCache) {
-	window.applicationCache.addEventListener(
-		'updateready',
-		function () {
-			// XXX: need better UI here
-			if (!window.confirm(
-					'A new version of the game is available.' +
-					' Reload to run the new version?')) {
-				return;
-			}
-			// hard: swap file on-fly might crash the game
-			// window.applicationCache.swapCache();
-			window.location.reload(); // easier
-		}
-	);
-};
+/* AppCacheUI: https://github.com/timdream/appcacheui */
+(function(){var e={init:function(){var a=document,b=a.body,c=window.applicationCache;if(c)if(b){this.info=a.getElementById("appcache_info");if(!this.info){a.cE=a.createElement;var d=a.cE("a"),a=a.cE("div");a.id="appcache_info";d.href="";a.appendChild(d);b.firstChild&&b.insertBefore(a,b.firstChild);this.info=a}"checking,downloading,progress,noupdate,cached,updateready,obsolete,error".split(",").forEach(function(a){c.addEventListener(a,e)})}else console.log("Premature init. Put the <script> in <body>.")},
+handleEvent:function(a){this.info.className=this.info.className.replace(/ ?appcache\-.+\b/g,"")+" appcache-"+a.type;"progress"===a.type&&a.total&&this.info.setAttribute("data-progress",a.loaded+1+"/"+a.total)}};e.init()})();
 
 //create all the variables
 var score;
