@@ -559,3 +559,110 @@ body {
 .ms-icon {background: url(./images/icon_ms.png) no-repeat -5px -20px;}
 .tb-icon {background: url(./images/icon_tb.png) no-repeat -5px -20px;}
 .fm-icon {background: url(./images/icon_fm.png) no-repeat -5px -20px;}
+
+
+/* AppCache UI */
+
+#appcache_info {
+  position: absolute;
+  position: fixed;
+  top: -2em;
+  left: 1em;
+  right: 1em;
+  font: 1em sans-serif;
+  line-height: 1.8em;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background-color: rgba(245, 245, 245, 0.9);
+  color: #000;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0 0 5px #e0e0e0;
+  box-shadow: 0 0 5px #e0e0e0;
+  border-top: none;
+
+  padding: 0 0.5em;
+  border-bottom-left-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+
+  -webkit-transition: top 0.5s ease;
+  -moz-transition: top 0.5s ease;
+  -ms-transition: top 0.5s ease;
+  -o-transition: top 0.5s ease;
+  transition: top 0.5s ease;
+  z-index: 99999;
+}
+
+#appcache_info a {
+  display: none;
+  float: right;
+  font-weight: bold;
+  text-decoration: none;
+  color: #00f;
+}
+
+#appcache_info.appcache-progress:after {
+  display: block;
+  float: right;
+  font-weight: bold;
+  content: attr(data-progress);
+}
+
+#appcache_info.appcache-updateready a,
+#appcache_info.appcache-obsolete a {
+  display: block;
+}
+
+body.appcache-allinfo #appcache_info.appcache-checking,
+#appcache_info.appcache-downloading,
+#appcache_info.appcache-progress,
+#appcache_info.appcache-updateready,
+#appcache_info.appcache-obsolete {
+  top: 0;
+}
+
+#appcache_info.appcache-updateready,
+#appcache_info.appcache-obsolete {
+  background-color: rgba(255, 245, 128, 0.9);
+  font-weight: bold;
+}
+
+body.appcache-allinfo #appcache_info.appcache-noupdate,
+body.appcache-allinfo #appcache_info.appcache-error,
+#appcache_info.appcache-cached {
+  top: -2em;
+
+  -webkit-transition: top 0.5s ease 3s;
+  -moz-transition: top 0.5s ease 3s;
+  -ms-transition: top 0.5s ease 3s;
+  -o-transition: top 0.5s ease 3s;
+  transition: top 0.5s ease 3s;
+}
+
+/* English (default) strings */
+#appcache_info a:before {
+  content: 'Reload Now';
+}
+#appcache_info.appcache-checking:before {
+  content: 'Checking for updates ...'
+}
+#appcache_info.appcache-downloading:before,
+#appcache_info.appcache-progress:before {
+  content: 'Downloading updates ...'
+}
+#appcache_info.appcache-updateready:before {
+  content: 'A new version is available.';
+}
+#appcache_info.appcache-noupdate:before {
+  content: 'No updates.';
+}
+#appcache_info.appcache-obsolete:before {
+  content: 'This website is obsolete. Reload to see new version.';
+}
+#appcache_info.appcache-error:before {
+  content: 'Unable to check updates.';
+}
+#appcache_info.appcache-cached:before {
+  content: 'Download complete.';
+}
