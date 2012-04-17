@@ -123,7 +123,7 @@ function init() {
 		uiFullscreen.addClass('support');
 	}
 
-	//Handle the audio
+	//Handle the melody
 	if(mediaSupport('audio/ogg; codecs=vorbis', 'audio') ||
 		mediaSupport('audio/mpeg', 'audio')) {
 		var melody = $('#melody')[0];
@@ -280,7 +280,9 @@ function reStartGame(){
 
 function playSound(filename) {
 	var index = ['intro','select','match','applause'].indexOf(filename);
-	$('audio.sound').get(index).play();
+	var sound = new Audio();
+	sound.src = $('audio.sound').get(index).src;
+	sound.play();
 }
 
 function toggleFullscreen() {

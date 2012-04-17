@@ -47,7 +47,7 @@ CACHE:
 ./style.css
 
 # Yes, it also works for remote files, but we will be unable to track their changes
-//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
 
 # "*" Below guarantees non-cached files can be accessed when network is available
 NETWORK:
