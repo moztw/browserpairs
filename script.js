@@ -287,10 +287,8 @@ function toggleFullscreen() {
 if ((document.fullScreenElement && document.fullScreenElement !== null) ||
 	(!document.mozFullScreen && !document.webkitIsFullScreen)) {
 		enterFullscreen(document.documentElement);
-		uiFullscreen.addClass('fullscreen');
 	} else {
 		cancelFullscreen();
-		uiFullscreen.removeClass('fullscreen');
 	}
 }
 

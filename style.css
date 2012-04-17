@@ -26,10 +26,6 @@ body {
 	background-size: auto auto, auto auto, 50px 50px, 50px 50px, auto auto;
 }
 
-:-moz-full-screen body, :-webkit-full-screen body {
-	background: none;
-}
-
 :-webkit-full-screen {
 	background: url(images/left.png) no-repeat bottom left fixed, url(images/right.png) no-repeat bottom right fixed, -webkit-linear-gradient(0, rgba(200,0,0,.5) 50%, transparent 50%), -webkit-linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%),  #F26522;
 	background-size: auto auto, auto auto, 50px 50px, 50px 50px, auto auto;
@@ -144,7 +140,22 @@ body {
 	left: -25px;
 }
 
-#fullscreen.fullscreen:before, #mute.melody:before, #interlude.enable:before {
+#mute.melody:before {
+	background-color: rgba(218, 73, 48, 1);
+	box-shadow: 0 0 5px rgba(218, 73, 48, 0.7);
+}
+
+:fullscreen #fullscreen:before {
+	background-color: rgba(218, 73, 48, 1);
+	box-shadow: 0 0 5px rgba(218, 73, 48, 0.7);
+}
+
+:-moz-full-screen #fullscreen:before {
+	background-color: rgba(218, 73, 48, 1);
+	box-shadow: 0 0 5px rgba(218, 73, 48, 0.7);
+}
+
+:-webkit-full-screen #fullscreen:before {
 	background-color: rgba(218, 73, 48, 1);
 	box-shadow: 0 0 5px rgba(218, 73, 48, 0.7);
 }
