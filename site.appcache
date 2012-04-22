@@ -1,6 +1,6 @@
 CACHE MANIFEST
 # Renew this hash every time to invalidate current cache
-# hash df0be193432164f0e32daa218248fd0a -
+# hash <run update_cache.sh to insert git commit hash here>
 
 # Files to ask browsers to cache even when user hits reload
 CACHE:
