@@ -8,13 +8,6 @@
 # This script only update the hash of all files
 #
 
-# Linux use different version of sed than others
-# which has problem interpreting the empty extension of -i parameter.
-if [ `uname -s` = Linux ]; then
-  SED='sed -i'
-else
-  SED="sed -i ''"
-fi
-
 HASH=`git rev-parse HEAD`
-eval $SED" -e 's/^# hash.*$/# hash "$HASH"/' site.appcache"
+echo git rev $HASH
+eval "sed -e 's/^# hash.*$/# hash "$HASH"/' site.appcache.files > site.appcache"
