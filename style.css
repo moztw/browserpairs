@@ -645,24 +645,24 @@ body.appcache-allinfo #appcache_info.appcache-error,
   content: 'Reload Now';
 }
 #appcache_info.appcache-checking:before {
-  content: 'Checking for updates ...'
+  content: 'Checking for offline content updates ...'
 }
 #appcache_info.appcache-downloading:before,
 #appcache_info.appcache-progress:before {
-  content: 'Downloading updates ...'
+  content: 'Downloading offline content ...'
 }
 #appcache_info.appcache-updateready:before {
   content: 'A new version is available.';
 }
 #appcache_info.appcache-noupdate:before {
-  content: 'No updates.';
+  content: 'No updates available for now.';
 }
 #appcache_info.appcache-obsolete:before {
   content: 'This website is obsolete. Reload to see new version.';
 }
 #appcache_info.appcache-error:before {
-  content: 'Unable to check updates.';
+  content: 'Unable to check for offline content updates.';
 }
 #appcache_info.appcache-cached:before {
-  content: 'Download complete.';
+  content: 'Download complete. Ready to be accessed offline.';
 }
