@@ -109,6 +109,8 @@ function init() {
 		uiFullscreen.addClass('support');
 	}
 
+	document.addEventListener('keydown', closebox, false);
+
 	//Handle the melody
 	if(mediaSupport('audio/ogg; codecs=vorbis', 'audio') ||
 		mediaSupport('audio/mpeg', 'audio')) {
@@ -264,10 +266,14 @@ function reStartGame(){
 	startGame();
 }
 
+function closebox(ev) {
+	if(ev.which == 27 && window.location.hash.length > 1)
+		window.location.hash = '';
+}
+
 function playSound(filename) {
 	var index = ['intro','select','match','applause'].indexOf(filename);
 	var sound = document.querySelectorAll('audio.sound')[index];
-	sound.currentTime = 0;
 	sound.play();
 }
 
