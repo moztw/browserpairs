@@ -19,8 +19,31 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:600|Days+One">
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="ribbon.css">
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '372562499479751', // App ID
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+    // Additional initialization code here
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+</script>
 
 <!-- CSS GitHub ribbon http://people.mozilla.com/~jbalogh/ribbon/ribbon.html -->
 <div class="right ribbon-holder">
@@ -44,9 +67,13 @@
 	<section id="gameIntro">
 		<div id="gamePlay">0%</div>
 	</section>
-	<section id="gameComplete">
-			<p id="score"></p>
-			<p><a id="gameAgain" class="button" href="#">Play again</a></p>
+  <section id="gameComplete">
+    <div id="result">
+      <p id="score"></p>
+      <p id="share"><a class="share-button facebook-share-button" href="#" target="_blank" title="Publish message to your Facebook wall">Post on Facebook</a><a class="share-button plurk-share-button" href="#" target="_blank" title="Post to Plurk">Plurk</a>
+</p>
+    </div>
+		<p><a id="gameAgain" class="button" href="#">Play again</a></p>
 	</section>
 	<section id="cards">
 		<div class="card">
