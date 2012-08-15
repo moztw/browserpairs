@@ -278,21 +278,48 @@ body {
 	bottom: 0;
 }
 
+#gameComplete a.share-button {
+  display: inline-block;
+  font-size: 11px;
+  margin-right: 10px;
+  padding: 1px 10px;
+  line-height: 16px;
+  height: 16px;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+#gameComplete a.facebook-share-button {
+  background: #336699;
+  border: 1px solid #003366;
+}
+#gameComplete a.plurk-share-button {
+  background: #CC6633;
+  border: 1px solid #993300;
+}
+#gameComplete .twitter-share-button {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 11px;
+}
+
 #gameComplete a.button {
 	background: white;
 	border-radius: 5px;
 	display: block;
 	font-size: 30px;
-	margin: 20px auto 0;
+	margin: 8px auto 0;
 	padding: 10px;
 	width: 200px;
 	border: 8px solid #DA4930;
 	text-decoration:none;
 }
 
-#score {
+#result {
 	background: white;
-	margin: 305px auto 0;
+	margin: 290px auto 0;
 	width: 60%;
 	border-radius: 5px;
 	font-size: 20px;
@@ -301,7 +328,7 @@ body {
 	position: relative;
 }
 
-#score:before {
+#result:before {
 	content: ' ';
 	position: absolute;
 	width: 0;
@@ -312,7 +339,7 @@ body {
 	border-color: transparent #DA4930 #DA4930 transparent;
 }
 
-#score:after {
+#result:after {
 	content: ' ';
 	position: absolute;
 	width: 0;
