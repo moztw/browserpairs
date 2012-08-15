@@ -250,6 +250,26 @@ function EndGame() {
 	clearTimeout(scoreTimeout);
 	playSound('applause');
 	$('#score').text('You score: ' + clicks + ' clicks and ' + score + ' seconds.');
+	$('.twitter-share-button').remove();
+	$('.facebook-share-button').off('click');
+	$('.facebook-share-button').on('click', function() {
+    FB.ui( {
+      method: 'feed',
+      name: 'MozTW Browser Pairs',
+      link: document.location.href,
+      caption: 'MozTW Browser Pairs',
+      description: 'I had played MozTW browser pairs game, scored ' + clicks + ' clicks and ' + score + ' seconds!'
+    });
+  });
+  $('.plurk-share-button').attr('href', 'http://www.plurk.com/?status=' + encodeURIComponent(document.location.href + ' (I had played MozTW browser pairs game, scored ' + clicks + ' clicks and ' + score + ' seconds!)') + '&qualifier=shares');
+  $(document.createElement('a')).attr('href', 'https://twitter.com/share')
+                                .attr('data-text', 'I had played #MozTW browser pairs game, scored ' + clicks + ' clicks and ' + score + ' seconds!')
+                                .attr('data-lang', 'en-US')
+                                .attr('data-hashtags', 'COSCUP')
+                                .addClass('twitter-share-button')
+                                .text('Tweet')
+                                .appendTo('#share');
+  twttr.widgets.load();
 	ui.addClass('end').removeClass('play');
 }
 
