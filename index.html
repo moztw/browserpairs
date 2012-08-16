@@ -6,7 +6,6 @@
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 <link rel="apple-touch-startup-image" sizes="768x1004" href="images/ipad-splash-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
 <link rel="apple-touch-startup-image" sizes="1024x748" href="images/ipad-splash-landscape.png"  media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
 <link rel="apple-touch-icon" href="images/logo.jpg" />
@@ -42,7 +41,7 @@
      js = d.createElement('script'); js.id = id; js.async = true;
      js.src = "//connect.facebook.net/en_US/all.js";
      ref.parentNode.insertBefore(js, ref);
-   }(document));
+    }(document));
 </script>
 
 <!-- CSS GitHub ribbon http://people.mozilla.com/~jbalogh/ribbon/ribbon.html -->
@@ -64,23 +63,25 @@
 		<p class="baritem" id="mute">Music</p>
 		<p class="baritem" id="fullscreen">FullScreen</p>
 	</header>
-	<section id="gameIntro">
-		<div id="gamePlay">0%</div>
-	</section>
-  <section id="gameComplete">
-    <div id="result">
-      <p id="score"></p>
-      <p id="share"><a class="share-button facebook-share-button" href="#" target="_blank" title="Publish message to your Facebook wall">Post on Facebook</a><a class="share-button plurk-share-button" href="#" target="_blank" title="Post to Plurk">Plurk</a>
-</p>
+  <section id="playground">
+    <div id="cards">
+      <div class="card">
+        <div class="face front"></div>
+        <div class="face back"></div>
+      </div> <!-- .card -->
+    </div> <!-- #cards -->
+	  <div id="gameIntro">
+		  <div id="gamePlay">0%</div>
     </div>
-		<p><a id="gameAgain" class="button" href="#">Play again</a></p>
-	</section>
-	<section id="cards">
-		<div class="card">
-			<div class="face front"></div>
-			<div class="face back"></div>
-		</div> <!-- .card -->
-	</section> <!-- #cards -->
+    <div id="gameComplete">
+      <div id="result">
+        <p id="score"></p>
+        <p id="share"><a class="share-button facebook-share-button" href="#" target="_blank" title="Publish message to your Facebook wall">Post on Facebook</a><a class="share-button plurk-share-button" href="#" target="_blank" title="Post to Plurk">Plurk</a>
+  </p>
+      </div>
+      <p><a id="gameAgain" class="button" href="#">Play again</a></p>
+    </div>
+  </section>
 </article> <!-- #game -->
 <div id="splash">
 	<p>
