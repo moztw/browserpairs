@@ -32,11 +32,11 @@ body {
 }
 
 #game {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 	background: #001711;
 	width: 760px;
 	height: 530px;
@@ -46,7 +46,6 @@ body {
 	border-radius: 4px;
 	padding: 20px;
 }
-
 #gameStats {
 	background: #eee;
 	width: 100%;
@@ -176,15 +175,24 @@ body {
 	display: block;
 }
 
-#cards {
+#playground {
 	margin-top: 58px;
 	position: relative;
 	width: 780px;
 	height: 500px;
-	display: none;
 }
 
-#game.play > #cards {
+#cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  z-index: 2;
+}
+
+#game.play #cards {
 	display: block;
 }
 
@@ -207,27 +215,30 @@ body {
 }
 
 #gameIntro {
-	margin-top: 50px;
 	padding-top: 10px;
 	text-align: center;
 	height: 480px;
 	width: 760px;
-	position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 	-moz-transition: opacity 1s ease-out;
 	-webkit-transition: opacity 1s ease-out;
 	-o-transition: opacity 1s ease-out;
 	transition: opacity 1s ease-out;
 }
 
-#game.open > #gameIntro {
+#game.open #gameIntro {
 	opacity: 1;
-	top: auto;
+  z-index: 3;
 	background: url(./images/start.png) center center no-repeat;
 }
 
-#game.play > #gameIntro, #game.end > #gameIntro {
+#game.play #gameIntro, #game.end #gameIntro {
 	opacity: 0;
-	top: -500px;
+  z-index: 0;
 	background: url(./images/start.png) center center no-repeat;
 }
 
@@ -256,24 +267,30 @@ body {
 #gameComplete {
 	background: url(./images/end.png) center 0 no-repeat;
 	text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 	width: 760px;
 	height: 400px;
+  visibility: hidden;
+  z-index: 1;
 	-moz-transition: all 1s ease-out;
 	-webkit-transition: all 1s ease-out;
 	-o-transition: all 1s ease-out;
 	transition: all 1s ease-out;
 	opacity: 0;
-	position: fixed;
-	top: 100%;
-	margin: auto 0;
 }
 
-#game.end > #gameComplete {
+#game.end #gameComplete {
 	-moz-transition: all .5s ease 2s;
 	-webkit-transition: all .5s ease 2s;
 	-o-transition: all .5s ease 2s;
 	transition: all .5s ease 2s;
 	opacity: 1;
+  z-index: 3;
+  visibility: visible;
 	top: 0;
 	bottom: 0;
 }
@@ -396,7 +413,7 @@ body {
 }
 
 #splash {
-	z-index: 90;
+  z-index: 90;
 	-moz-transition: all .8s ease-in 1.2s;
 	-webkit-transition: all .8s ease-in 1.2s;
 	-o-transition: all .8s ease-in 1.2s;
