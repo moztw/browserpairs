@@ -252,7 +252,7 @@ function EndGame() {
 	$('#score').text('You score: ' + clicks + ' clicks and ' + score + ' seconds.');
 	$('.twitter-share-button').remove();
 	$('.facebook-share-button').off('click');
-	$('.facebook-share-button').on('click', function() {
+	$('.facebook-share-button').on('click', function(event) {
     FB.ui( {
       method: 'feed',
       name: 'MozTW Browser Pairs',
@@ -260,6 +260,8 @@ function EndGame() {
       caption: 'MozTW Browser Pairs',
       description: 'I had played MozTW browser pairs game, scored ' + clicks + ' clicks and ' + score + ' seconds!'
     });
+    event.stopPropagation();
+    event.preventDefault();
   });
   $('.plurk-share-button').attr('href', 'http://www.plurk.com/?status=' + encodeURIComponent(document.location.href + ' (I had played MozTW browser pairs game, scored ' + clicks + ' clicks and ' + score + ' seconds!)') + '&qualifier=shares');
   $(document.createElement('a')).attr('href', 'https://twitter.com/share')
