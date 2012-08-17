@@ -258,16 +258,16 @@ function EndGame() {
       name: 'MozTW Browser Pairs',
       link: document.location.href,
       caption: 'MozTW Browser Pairs',
-      description: 'I had played MozTW browser pairs game, scored ' + clicks + ' clicks and ' + score + ' seconds!'
+      description: '我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，翻了 ' + clicks + ' 次 ' + score + '秒過關，快來挑戰我吧！'
     });
     event.stopPropagation();
     event.preventDefault();
   });
-  $('.plurk-share-button').attr('href', 'http://www.plurk.com/?status=' + encodeURIComponent(document.location.href + ' (I had played MozTW browser pairs game, scored ' + clicks + ' clicks and ' + score + ' seconds!)') + '&qualifier=shares');
+  $('.plurk-share-button').attr('href', 'http://www.plurk.com/?status=' + encodeURIComponent(document.location.href + ' (我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，翻了 ' + clicks + ' 次 ' + score + '秒過關，快來挑戰我吧！)') + '&qualifier=shares');
   if ('twttr' in window) {
     $(document.createElement('a')).attr('href', 'https://twitter.com/share')
-                                  .attr('data-text', 'I had played #MozTW browser pairs game, scored ' + clicks + ' clicks and ' + score + ' seconds!')
-                                  .attr('data-lang', 'en-US')
+                                  .attr('data-text', '我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，翻了 ' + clicks + ' 次 ' + score + '秒過關，快來挑戰我吧！')
+                                  .attr('data-lang', 'zh-TW')
                                   .attr('data-hashtags', 'COSCUP')
                                   .addClass('twitter-share-button')
                                   .text('Tweet')
