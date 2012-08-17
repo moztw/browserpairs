@@ -264,7 +264,7 @@ function EndGame() {
     event.preventDefault();
   });
   $('.plurk-share-button').attr('href', 'http://www.plurk.com/?status=' + encodeURIComponent(document.location.href + ' (I had played MozTW browser pairs game, scored ' + clicks + ' clicks and ' + score + ' seconds!)') + '&qualifier=shares');
-  if (window.twttr) {
+  if ('twttr' in window) {
     $(document.createElement('a')).attr('href', 'https://twitter.com/share')
                                   .attr('data-text', 'I had played #MozTW browser pairs game, scored ' + clicks + ' clicks and ' + score + ' seconds!')
                                   .attr('data-lang', 'en-US')
