@@ -250,6 +250,7 @@ function EndGame() {
 	clearTimeout(scoreTimeout);
 	playSound('applause');
 	$('#score').text('You score: ' + clicks + ' clicks and ' + score + ' seconds.');
+	ui.addClass('end').removeClass('play');
 	$('.twitter-share-button').remove();
 	$('.facebook-share-button').off('click');
 	$('.facebook-share-button').on('click', function(event) {
@@ -274,7 +275,6 @@ function EndGame() {
                                   .appendTo('#share');
     twttr.widgets.load();
   }
-	ui.addClass('end').removeClass('play');
 }
 
 //recreate the original card , stop the timer and re populate the array with class names
