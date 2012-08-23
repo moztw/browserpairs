@@ -1,7 +1,7 @@
 # config for apache (not github.com)
 
 AddType text/cache-manifest .appcache
-
+AddType application/x-web-app-manifest+json .webapp
 <Files site.appcache>
 	ExpiresActive On
 	ExpiresDefault "access"
