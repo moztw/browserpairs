@@ -1,0 +1,11 @@
+{
+    "name":"Browser Pairs Game",
+    "developer": {
+        "name":"MozTW",
+        "url":"http://moztw.org"
+    },
+    "description":"Browser Pairs Game",
+    "icons":{
+        "500":"/images/logo.jpg"
+    }
+}
