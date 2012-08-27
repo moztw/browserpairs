@@ -1,0 +1,12 @@
+{
+    "name":"Browser Pairs Game",
+    "developer": {
+        "name":"MozTW",
+        "url":"http://moztw.org/"
+    },
+    "description":"Browser Pairs Game",
+    "launch_path":"/foxmosa/game/pairs/",
+    "icons":{
+        "500":"/foxmosa/game/pairs/images/logo.jpg"
+    }
+}
