@@ -35,7 +35,7 @@ matchingGame.deck = [
 'ms', 'ms-icon',
 'tb', 'tb-icon',
 'fm', 'fm-icon'
-,];
+];
 
 matchingGame.clone = $.extend(true, [], matchingGame.deck);
 
@@ -298,7 +298,9 @@ function closebox(ev) {
 function playSound(filename) {
 	var index = ['intro','select','match','applause'].indexOf(filename);
 	var sound = document.querySelectorAll('audio.sound')[index];
-	sound.play();
+	try{
+		sound.play();
+	}catch(err){}
 }
 
 function toggleFullscreen() {
