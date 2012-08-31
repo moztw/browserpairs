@@ -296,9 +296,9 @@ function closebox(ev) {
 }
 
 function playSound(filename) {
-	var index = ['intro','select','match','applause'].indexOf(filename);
-	var sound = document.querySelectorAll('audio.sound')[index];
 	try{
+		var index = ['intro','select','match','applause'].indexOf(filename);
+		var sound = document.querySelectorAll('audio.sound')[index];
 		sound.play();
 	}catch(err){}
 }
