@@ -300,7 +300,8 @@ function playSound(filename) {
 		var index = ['intro','select','match','applause'].indexOf(filename);
 		var sound = document.querySelectorAll('audio.sound')[index];
 		sound.play();
-	}catch(err){}
+	}catch(err){
+	}
 }
 
 function toggleFullscreen() {
