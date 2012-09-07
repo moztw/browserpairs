@@ -250,8 +250,8 @@ function EndGame() {
 	clearTimeout(scoreTimeout);
 	playSound('applause');
 	// Define score formula
-	total_score =  ( 33/(score/60) + 66/(clicks/18) ).toFixed(2);
-	$('#score').html('Your score: ' + total_score + '<br>(' + clicks + ' clicks and ' + score + ' seconds)');
+	total_score =  ( 33/(score/60) + 66/(clicks/24) ).toFixed(2);
+	$('#score').html('Your score: ' + total_score + '<br>(' + clicks + ' clicks in ' + score + ' seconds)');
 	ui.addClass('end').removeClass('play');
 	$('.twitter-share-button').remove();
 	$('.facebook-share-button').off('click');
