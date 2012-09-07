@@ -249,7 +249,9 @@ function removeTookCards() {
 function EndGame() {
 	clearTimeout(scoreTimeout);
 	playSound('applause');
-	$('#score').text('You score: ' + clicks + ' clicks and ' + score + ' seconds.');
+	// Define score formula
+	total_score =  ( 33/(score/60) + 66/(clicks/18) ).toFixed(2);
+	$('#score').text('You score: ' + total_score + ' point(s), ' + clicks + ' clicks and ' + score + ' seconds.');
 	ui.addClass('end').removeClass('play');
 	$('.twitter-share-button').remove();
 	$('.facebook-share-button').off('click');
@@ -264,10 +266,10 @@ function EndGame() {
     event.stopPropagation();
     event.preventDefault();
   });
-  $('.plurk-share-button').attr('href', 'http://www.plurk.com/m/?content=' + encodeURIComponent(document.location.href + ' (我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，翻了 ' + clicks + ' 次 ' + score + '秒過關，快來挑戰我吧！)') + '&qualifier=shares');
+  $('.plurk-share-button').attr('href', 'http://www.plurk.com/m/?content=' + encodeURIComponent(document.location.href + ' (我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，'+ total_score + '分過關過關，快來挑戰我吧！)') + '&qualifier=shares');
   if ('twttr' in window) {
     $(document.createElement('a')).attr('href', 'https://twitter.com/share')
-                                  .attr('data-text', '我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，翻了 ' + clicks + ' 次 ' + score + '秒過關，快來挑戰我吧！')
+                                  .attr('data-text', '我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，' + total_score + '分過關，快來挑戰我吧！')
                                   .attr('data-lang', 'zh-TW')
                                   .attr('data-hashtags', 'Firefox')
                                   .addClass('twitter-share-button')
