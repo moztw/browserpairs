@@ -269,7 +269,7 @@ function EndGame() {
     $(document.createElement('a')).attr('href', 'https://twitter.com/share')
                                   .attr('data-text', '我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，翻了 ' + clicks + ' 次 ' + score + '秒過關，快來挑戰我吧！')
                                   .attr('data-lang', 'zh-TW')
-                                  .attr('data-hashtags', 'COSCUP')
+                                  .attr('data-hashtags', 'Firefox')
                                   .addClass('twitter-share-button')
                                   .text('Tweet')
                                   .appendTo('#share');
