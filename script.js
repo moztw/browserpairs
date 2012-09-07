@@ -251,7 +251,7 @@ function EndGame() {
 	playSound('applause');
 	// Define score formula
 	total_score =  ( 33/(score/60) + 66/(clicks/18) ).toFixed(2);
-	$('#score').text('You score: ' + total_score + ' point(s), ' + clicks + ' clicks and ' + score + ' seconds.');
+	$('#score').html('Your score: ' + total_score + '<br>(' + clicks + ' clicks and ' + score + ' seconds)');
 	ui.addClass('end').removeClass('play');
 	$('.twitter-share-button').remove();
 	$('.facebook-share-button').off('click');
@@ -261,7 +261,7 @@ function EndGame() {
       name: 'MozTW Browser Pairs',
       link: document.location.href,
       caption: 'MozTW Browser Pairs',
-      description: '我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，翻了 ' + clicks + ' 次 ' + score + '秒過關，快來挑戰我吧！'
+      description: '我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，' + total_score + '分過關，快來挑戰我吧！'
     });
     event.stopPropagation();
     event.preventDefault();
