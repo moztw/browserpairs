@@ -426,6 +426,8 @@ body {
 	-webkit-transform: scale(3);
 	-o-transform: scale(3);
 	transform: scale(3);
+	pointer-events:none;
+
 }
 
 #splash.disable {
@@ -462,6 +464,7 @@ body {
 	margin: 0 18px;
 	border-radius: 5px;
 	box-shadow: 0 0 10px #000;
+	pointer-events:none;
 }
 
 #splash p {
