@@ -3,6 +3,16 @@
 	margin:0;
 }
 
+/* 
+    it seems no-one implement yet, current default value is min-width: 980px 
+    if appliable, min-height can prevent card covered in non-enough height screen.
+    http://dev.w3.org/csswg/css-device-adapt/
+*/
+@viewport {
+    min-width: 760px;
+    min-height: 530px;
+}
+
 a {
 	outline: none;
 	text-decoration:none;
@@ -178,7 +188,6 @@ body {
 #playground {
 	margin-top: 58px;
 	position: relative;
-	width: 780px;
 	height: 500px;
 }
 
