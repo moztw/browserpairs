@@ -266,7 +266,7 @@ function EndGame() {
     event.stopPropagation();
     event.preventDefault();
   });
-  $('.plurk-share-button').attr('href', 'http://www.plurk.com/m/?content=' + encodeURIComponent( '我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，'+ total_score + '分過關過關，'+ document.location.href +' (快來挑戰我吧！)') + '&qualifier=shares');
+  $('.plurk-share-button').attr('href', 'http://www.plurk.com/m/?content=' + encodeURIComponent( '我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，'+ total_score + '分過關，'+ document.location.href +' (快來挑戰我吧！)') + '&qualifier=shares');
   if ('twttr' in window) {
     $(document.createElement('a')).attr('href', 'https://twitter.com/share')
                                   .attr('data-text', '我剛用 #Firefox #Android 玩 MozTW 的瀏覽器翻牌遊戲，' + total_score + '分過關，快來挑戰我吧！')
